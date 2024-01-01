@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-frontend
+  namespace: default
+  labels:
+    env: dev
+spec:
+  selector:
+    matchLabels:
+      app: frontend-fargate
+  template:
+    metadata:
+      labels:
+        app: frontend-fargate
